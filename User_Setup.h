@@ -130,7 +130,7 @@
 // sketch. e.g. with digitalWrite(TFT_BL, LOW);
 
 // #define TFT_BL   32            // LED back-light control pin
-// #define TFT_BACKLIGHT_ON HIGH  // Level to turn ON back-light (HIGH or LOW)
+#define TFT_BACKLIGHT_ON HIGH  // Level to turn ON back-light (HIGH or LOW)
 
 
 
@@ -167,13 +167,13 @@
 // ###### EDIT THE PIN NUMBERS IN THE LINES FOLLOWING TO SUIT YOUR ESP8266 SETUP ######
 
 // For NodeMCU - use pin numbers in the form PIN_Dx where Dx is the NodeMCU pin designation
-#define TFT_MISO  PIN_D6  // Automatically assigned with ESP8266 if not defined
-#define TFT_MOSI  PIN_D7  // Automatically assigned with ESP8266 if not defined
-#define TFT_SCLK  PIN_D5  // Automatically assigned with ESP8266 if not defined
+// #define TFT_MISO  PIN_D6  // Automatically assigned with ESP8266 if not defined
+// #define TFT_MOSI  PIN_D7  // Automatically assigned with ESP8266 if not defined
+// #define TFT_SCLK  PIN_D5  // Automatically assigned with ESP8266 if not defined
 
-#define TFT_CS    PIN_D8  // Chip select control pin D8
-#define TFT_DC    PIN_D3  // Data Command control pin
-#define TFT_RST   PIN_D4  // Reset pin (could connect to NodeMCU RST, see next line)
+// #define TFT_CS    PIN_D8  // Chip select control pin D8
+// #define TFT_DC    PIN_D3  // Data Command control pin
+// #define TFT_RST   PIN_D4  // Reset pin (could connect to NodeMCU RST, see next line)
 //#define TFT_RST  -1     // Set TFT_RST to -1 if the display RESET is connected to NodeMCU RST or 3.3V
 
 
@@ -220,12 +220,12 @@
 // For ESP32 Dev board (only tested with GC9A01 display)
 // The hardware SPI can be mapped to any pins
 
-//#define TFT_MOSI 15 // In some display driver board, it might be written as "SDA" and so on.
-//#define TFT_SCLK 14
-//#define TFT_CS   5  // Chip select control pin
-//#define TFT_DC   27  // Data Command control pin
-//#define TFT_RST  33  // Reset pin (could connect to Arduino RESET pin)
-//#define TFT_BL   22  // LED back-light
+#define TFT_MOSI 23 // In some display driver board, it might be written as "SDA" and so on.
+#define TFT_SCLK 16
+#define TFT_CS   15  // Chip select control pin
+#define TFT_DC   17  // Data Command control pin
+#define TFT_RST  4  // Reset pin (could connect to Arduino RESET pin)
+#define TFT_BL   18  // LED back-light
 
 //#define TOUCH_CS 21     // Chip select pin (T_CS) of touch screen
 
@@ -374,7 +374,7 @@
 // The ESP32 has 2 free SPI ports i.e. VSPI and HSPI, the VSPI is the default.
 // If the VSPI port is in use and pins are not accessible (e.g. TTGO T-Beam)
 // then uncomment the following line:
-//#define USE_HSPI_PORT
+// #define USE_HSPI_PORT
 
 // Comment out the following #define if "SPI Transactions" do not need to be
 // supported. When commented out the code size will be smaller and sketches will
